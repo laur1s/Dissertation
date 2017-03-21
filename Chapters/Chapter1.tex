@@ -1,0 +1,20 @@
+\chapter{Introduction}
+\lhead{\emph{Introduction}}
+
+Food is a very important part of everyone’s life.  One of the common sayings about food is ``You are what you eat" meaning that eating healthy food like vegetables and fruits will make one healthier and eating fast food is bad for one’s body.  
+
+Tracking what one eats is really helpful for maintaining a healthy diet or losing weight. Since these days we are living in such a fast-paced world it is often hard to keep track of food that one eats during the day. Weight and calorie intake apps for smartphones are getting more popular since they allow users to capture their food intake on the go. However, an approach that today’s mobile applications use for entering food intake is obtrusive and not very user-friendly. Users are required to open their food diary applications and search for the eaten food using their smartphones' keyboards. 
+
+The goal of this project is to explore techniques for an automatic food classification form images. This could enable users to capture food that they eat in an unobtrusive and user-friendly way. A created machine learning model could use a picture of a food taken by a smartphone's camera as an input method and classify it. In most of the smartphones, a camera can be accessed in a few clicks. People are used to taking pictures on their smartphones. Therefore, an automatic food classification using phone camera would be a perfect solution to the food tracking problem. 
+
+However, automatic food classification in not an easy task. There is no direct way to detect what kind of food product is in a picture. the digital image is just a matrix of numbers representing an intensity of three different color components: red, green and blue (RGB) it is impossible to create an algorithm that could directly map image to the label of a food item. Therefore, a machine learning is needed to learn a model that can recognize a specific type of food from an image and differentiate between various types of food. Machine learning is the subfield of computer science that gives computers the ability to learn without being explicitly programmed \citep{Samuel}.
+
+Supervised learning is a machine learning task for mapping labeled examples as training data and makes label predictions for all unseen points \citep{Mohri:2012:FML:2371238}. This project explores various supervised learning algorithms that could be used for classifying the images as well as techniques for image processing for machine learning.
+
+The aims of the project are to explore the machine learning algorithms that could be used for food image classification.
+Then, these algorithms are going to be systematically evaluated and their performance is going to be compared.
+
+The key challenges, that are going to be faced are the generation of a food image dataset, preprocessing of images and creating and training of machine learning algorithms.
+
+\section{The structure of the report}
+In the next chapter, background theory and research work in this area are going to be introduced. Chapter 3 presents the chosen programming language and machine learning library, as well as evaluation method used to track the performance of the algorithms used. Chapter 4 displays why a dataset of food images was needed, what kind of requirements were set for it and how was it downloaded. In Chapter 5 implementation details of machine learning algorithms are described. Each algorithm is firstly shortly introduced, then implementation details are provided and finally, it's classification results are shown.  In Chapter 5 a specific type of machine learning- deep learning is explored. Chapter 6 compares the best results of all classifiers that were built. Finally, in chapter 7 the conclusions are derived.

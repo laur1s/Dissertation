@@ -1,0 +1,59 @@
+
+\chapter{Results}
+\lhead{\emph{Results}}
+In this chapter, the results of each classification method are going to be compared. Then, advantages and disadvantage of these methods are going to be discussed.
+
+\section{Comparison of Accuracy Scores}
+
+Results of the best classification model of each method tried are shown in  \autoref{table:all}. From this table, it can be seen that transfer learning is the best classification method with 98.20 percent accuracy. The convolutional neural network is at the second place with 69.34 percent accuracy.  The difference in accuracy score between other classification methods is not that marginal. Linear classifier achieved the lowest accuracy score of 51.53 percent while support vector machine model achieved accuracy score of 60.73 percent. 
+
+\begin{table}[h]
+\begin{center}
+\begin{tabular}{ |c|c| } 
+ \hline
+Method &  Classification Accuracy \\   \hline
+KNN    &  56.32\% \\
+SVM with PCA   & 60.73\% \\
+Linear   &    51.53\%  \\
+3 Layer    &   54.02\% \\
+5 Layer    &  58.81\% \\
+CNN & 69.34\% \\
+Transfer  &  98.20\% \\
+
+ \hline
+\end{tabular}
+\caption{Best classifiers of each method}
+\label{table:all}
+\end{center}
+\end{table}
+
+
+\section{Comparison  of time complexity of the classifiers}
+There are three kinds of time complexities that can be considered for evaluating machine learning classifiers. The first one is a build-time complexity - how long does it take to build the classification model. The second one is a training complexity - the amount that it takes to train the classification model. The final one is a runtime complexity - how long does the classifier take to tell a class of an item. 
+
+The K-nearest neighbours classifier was simple to build.  It only required a hyper-parameter optimisation which was rather quick. The training of the algorithm was also fast because to train this algorithm the only required task is saving the dataset to the memory. However, the runtime performance of this classifier was not great. During the runtime, this algorithm calculates a distance between an item that class is needed to be predicted and every other element in the dataset. Later these distances are compared to find the K closest distances. That is a very computationally expensive task.
+
+It was a much more difficult task to get Support Vector Machine Algorithm to work. Despite the fact, that the algorithm was designed to work on a high dimensional data,  the food image dataset was too complex for it. The only way to use this algorithm was by firstly applying the PCA to the dataset. Therefore, building this model required a significant amount of experimentation and took a much longer time, before actual results were seen. It took a very long time to train the support vector machine. Prediction time was faster than the prediction time of the KNN classifier but was not instantaneous.
+
+The Linear classifier did not take much time to create because it is a very simple classification model. Training of this algorithm was fast because the only things calculated were a matrix product of training images and weights, and ran an optimisation algorithm. Prediction time was almost immediate.
+
+Deep neural network required much more experimentation, to make it work. Training of the algorithm took a long time, but the prediction was almost as fast as the linear classification model.
+
+Convolutional neural network required, even more, engineering work. Some CNN models architectures that were tried had a very low classification accuracy. Various models had to be tested, to finally find the architecture that was working.  Training of the algorithm took the longest amount of time from all the algorithms implemented. However, the classifier was able to predict the classes of new pictures very quickly.
+
+The transfer learning technique was simple because the model with a python script was provided by Google. In a case where one has to write a script that retrains the final layer,  it can be a very hard task. The calculation of the bottlenecks took a long time. Therefore a training complexity of this algorithm was high.  However, for classifying the images, this algorithm took the same time as other neural networks.
+
+To conclude, the algorithm that took the least time to built was KNN. The most time was spent deep neural network models because finding an appropriate network architecture was a very hard task. The classification algorithm that took the least time to train was KNN. For fastest prediction times, the linear classifier was the best option.
+
+\section{Possible improvements and limitations of classification models}
+
+The KNN classifier, the SVM,  and the linear classifier model can not be considerably improved.  Hyperparameters of these algorithms were optimised. Therefore, the only possibility for improving them is training these models on a more powerful machine with a larger image size.
+
+In contrast,  the accuracy of the deep neural network and the convolutional neural network can still be considerably improved.It can be done by adding more layers or modifying the structure. The number of ways that these networks can be configured is infinite. 
+That makes optimisation possible but hard task. It is unknown what structure is needed.
+
+That is the main limitation of neural networks that was observed in this project. A person building deep or convolutional neural network has to make a lot of decisions that directly impact the performance of the network. Choosing the number of layers and the number of neurons in each layer is a challenging task. Furthermore, activation function and weight optimisation function needed to be selected too.
+
+\section{Summary}
+
+To conclude transfer learning achieved the highest classification score. However, this model was not built from the ground up. The best model that was built was the convolutional neural network which achieved 69.34 \% accuracy.  It was also discussed that deep neural network models are very hard to build and take much longer time to train when compared to other classification methods. In the next chapter, the conclusions of the work are going to be deducted.
