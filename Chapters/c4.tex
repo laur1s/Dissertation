@@ -4,7 +4,7 @@
 Before starting to experiment with machine learning algorithms for food classification, a dataset of food images needed to be created. In this chapter, reasons, why the dataset is required, are going to be explained and a process of accumulating the dataset is going to be described.
 
 \section{The Requirements for the Food Image Dataset}
- The dataset was needed because classification algorithms use the dataset to learn a classification model from itThe most important requirements to the dataset were:
+ The dataset was needed because classification algorithms use the dataset to learn a classification model from it. The most important requirements to the dataset were:
 
 \begin{enumerate}
   \item The images of the dataset should be taken under a real life conditions.
@@ -41,7 +41,7 @@ Since ImageNet publicly only provides links to the original hosts of image files
 
 To overcome this problem, permission to access the original ImageNet download files was requested. After agreeing to use the data set only for non-commercial research and educational purposes, the permission to download the database was granted. It allowed accessing the original data set with all images included. The original archives were downloaded using a python method described in the following section.  Each class of downloaded images contained approximately 1,300 pictures.
 
-\section {Pre-processing the Images}
+\section {Image Preprocessing}
 Python class named Data was created to handle a creation of the image data set. The class is very flexible and allows images to be loaded using various ways. The constructor of the class takes one argument: the relative path to the folder, where the data is located. Then, images can be loaded from a pickle file located in /pickle folder or can be read directly from a /images folder. It is recommended to save the files to a pickle file after reading the files from a /images folder for the first time. A pickle is a binary file representing a Python object. Reading the dataset from a pickle takes much less time than reading images one by one because Python only needs to read one file compared to thousands of files while loading images. To be loaded correctly, the pickle should be structured as a list of labels of every picture, followed by a list of images. Method try\_download\_images is provided in this class to download the data set from ImageNet. It takes two arguments: username and ImageNet access key, downloads the archive of images for each image class. The method named extract can be used to extract downloaded .tar archive files into the pictures folder. Before extracting each archive, it checks if files already exist and if that is the case extraction is aborted. Method resize\_image can be used for resizing images in the dataset. It takes a list with height and width of requested image size and resizes the images.  Finally, train\_test\_split method can be used to shuffle the data and split it into training and testing datasets. It takes an optional argument- a fraction that shows a percentage of data to be used for testing the classifier.
 
 \section{Summary}

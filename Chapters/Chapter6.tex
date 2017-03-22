@@ -1,19 +1,21 @@
-\chapter{Conclusion}
-\lhead{\emph{Conclusion}}
+\chapter{Conclusions}
+\lhead{\emph{Conclusions}}
 
 
 
-Objectives of the project were to practically understand machine learning algorithms that could be used for classifying images, find a suitable food image dataset, preprocess the images, build image classifiers using various machine learning algorithms, train these classifiers with the accumulated dataset and evaluate the performance.
-
-\section{Limitations}
-The main limitation of the project was that machine learning algorithm takes a very long time to train. Images are very high dimensional data, and an enormous amount of the computing power is required to train a good machine learning model for image classification. Therefore, this project was limited to using only four image classes.  These four classes are not able to represent all types of food that are eaten by people.
-
-The second limitation that was faced during this project was that it was not possible to explore larger deep learning networks on the hardware setup that was used. With deeper  neural networks it would be plausible to get  better  accuracy scores, then the accuracy scores received
-
-\section{Future Work}
-
-For extending this project, it should be focussed on one classification algorithm and making it work on a larger number of classes.  A convolutional neural network would be the most promising model to explore further because it achieved high accuracy score.  It would be possible to use a GPU cluster to train a model that could classify between multiple categories of food. There is not much research that has been done to explore convolutional neural networks for food classification. The classification models that were built classify only between four classes of pictures. This number of food categories is too small to use these classifiers for dietary assessment.  A good number of classes for a new model would be around 100 classes of most popular dishes. If this new model achieved the high accuracy rate, it would be possible to use this model in dietary assessment applications.
+Objectives of the project were to practically understand machine learning algorithms that can be used for classifying images. To accomplish this  task   a suitable food image dataset was found and images were preprocessed. Then  image classifiers using various machine learning algorithms were built.  Finally, these classifiers were trained  on  the accumulated dataset and  their performances were evaluated.
 
 \section{Lessons Learnt}
 
-During the progress of this project, it was gradually discovered why image classification is such a hard problem. Computer Vision compared to other subfields of AI such as voice recognition, seems to be progressing slowly.  The problem that algorithms face in image recognition is that images are very dynamic and are susceptible to different kind of variations. It was practically observed that machine learning algorithms that are used in practice for tasks such as spam detection, credit card fraud detection and other tasks were unable to classify images with high enough accuracy.  It was also observed that machine learning algorithms take a very long time to train. That could be a barrier to the adaptation of machine learning techniques. Overall, the project was successful. A framework for converting pictures to the dataset of images was built, different classification algorithms were successfully tried and evaluated.
+During the progress of this project, it was gradually discovered why image classification is such a hard problem.  The problem that algorithms in image recognition task face  is that images are very dynamic and are susceptible to different kind of variations. It was practically observed that machine learning algorithms that are   successfully  used in practice for tasks such as spam detection, credit card fraud detection and other tasks were unable to classify images with a high enough accuracy.  It was also observed that machine learning algorithms take a very long time to train. This is  a  main barrier for using machine learning techniques for vision. Overall, the project was successful. A framework for converting pictures to the dataset of images was built, different classification algorithms were successfully tried and evaluated.
+
+\section{Limitations}
+The main limitation of the project was that machine learning algorithms take a very long time to train. Images are very high dimensional data, and an enormous amount of the computing power is required to train a good machine learning model for image classification. Therefore, this project was limited to using only four image classes. These four classes are not able to represent all types of food that are eaten by people.
+
+The second limitation that was faced during this project was that it was not possible to explore larger deep learning networks on the hardware setup  used. Because of that, a maximum  accuracy score that could be reached by the  deep neural network and the  convolutional neural network was not achieved. With deeper architectures of neural networks it would be plausible to get  better accuracy scores.
+
+\section{Future Work}
+
+For extending this project, one classification method should be explored more thoroughly. Then, a classifier that distinguishes between a greater amounts of food classes should be built using this model.   A convolutional neural network would be the most promising model to explore further because it achieved high accuracy score. Also, researchers have proven that a convolutional neural network is the best method that can be used for image classification. Furthermore, there here has not been much research done about  a food classification with convolutional neural networks.  A good number of classes for a new model would be around 100 classes of most popular dishes.  Because of the increased complexity a GPU cluster will be needed to train this model. If this new model achieved the high accuracy rate, it would be possible to use this model in dietary assessment applications.
+
+

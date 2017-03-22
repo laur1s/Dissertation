@@ -163,7 +163,7 @@ It was unknown how long it would take to train the network, so it was decided to
 
 Then, a convolutional neural network was trained for 100 epochs. The best learning rate that was used in the deep learning network (0.0001) was too small for the convolutional network. The learning rate was gradually increased, and it was observed that learning rate 0.003 suited the network best. The network with this learning rate achieved 100 percent accuracy on the training dataset in 68 epochs. Despite the fact, that the result looked very impressive, it was known that convolutional neural networks tend to overfit the data. That means that they learn to classify the training dataset very accurately but do not classify the test dataset well. Therefore, the classifier was tested on the test dataset. It achieved 38.12 percent accuracy, which was not that good.
 
-The algorithm was modified to accept RGB images, for testing whether colour channels have an influence on the classification accuracy. After the network was trained, it was observed that it achieved 47.51 percent accuracy on the test dataset. More than 9 percent increase in accuracy showed that colour is an important component for a food image classification and should be kept if possible. The architecture of both convolutional neural networks trained is shown in \autoref{table:convi}.
+The algorithm was modified to accept RGB images, for testing whether colour channels have an influence on the classification accuracy. After the network was trained, it was observed that it achieved 47.51 percent accuracy on the test dataset. More than 9 percent increase in accuracy showed that colour is an important component for a food image classification and should be kept if possible. The architecture of both convolutional neural networks trained is shown in \autoref{table:convi}. A picture ilustration of different layers in this network is shown in \autoref{fig:conv2}.
 
 \begin{table}[h]
 \begin{center}
@@ -178,9 +178,18 @@ The algorithm was modified to accept RGB images, for testing whether colour chan
 \caption{Details about the first two convolutional models tried}
 
 \label{table:convi}
-\textit{ conv - convolutional layer, fc - fully connecteed layer, o - output layer}
+\textit{ conv - convolutional layer, fc - fully connected layer, o - output layer}
 \end{center}
 \end{table}
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.8\textwidth]{Figures/4/conv_diagram.PNG}
+\caption{The  Convolutional neural network model diagram }
+\label{fig:conv2}
+\end{figure}
+
 
 \subsection{Improving the Convolutional Neural Network}
 
@@ -189,7 +198,7 @@ Since both classifiers achieved a hundred percent accuracy on the training datas
 50 percent dropout rate was added to the every layer of the network. The Introduced drop layer helped to prevent the network from overfitting. However, because of the high dropout ratio the network was unable to optimise the weights and it classified worse than previously trained models. It was tried to increase the learning rate. This solution did not work because larger step size caused the optimisation algorithm to keep overshooting the minimum. The other tried solution was increasing the probability to keep neuron connections to 80 percent. It improved the classification accuracy for both grayscale and RGB image classification, but the improvement was only marginal (49.04 percent accuracy for RGB test data and 40 percent accuracy for the grayscale image classifier). Lastly, it was tried to keep 90 percent of the neuron connections in the network, but it decreased the accuracy on the test dataset. It was concluded that learning rate 0.003 and 20 percent dropout probability were the best set of hyperparameters for this network. Because there were no more hyperparameters that could be further optimised it was tried to increase the size of input images.
 
 
-\subsection{CNN on larger images}
+\subsection{Designing Convlutional Neural Network  for larger images}
 
 It was expected that larger image size would lead to a better accuracy score when performing image classification because larger image sizes allow more information to be preserved in pictures. The network was redesigned to take 56x56x3 pictures as an input. One more convolutional and a max-pooling layer were also introduced to the architecture of the network . It was tried to find the optimal learning rate. The network was trained with 0.003 learning rate and a 20 percent drop probability for 30 epochs. It was noticed that learning rate, which worked very well for the previous neural network, was too high for this network. Because of that, the gradient optimisation algorithm kept overshooting the minimum and training accuracy, and loss stayed the same during the training of the model. To find the optimal learning rate, it was gradually lowered until it reached 0.0015. With this learning rate, the algorithm was able to learn the optimal weights. When tested it achieved 60.72 test accuracy. It was tried to increase the number of epochs to 100 because more epochs meant that the weight could be optimised more correctly. After testing the model on the test dataset, it was observed that the accuracy increased to 62.26 percent.
 
@@ -233,7 +242,7 @@ It was chosen to retrain the Google's Inception v3 model. A python script for lo
 \label{fig:retrain}
 \end{figure}
 
-\subsection{ Retraining of the Inception v3 Model}
+\subsection{ Retraining the Inception v3 Model}
 
 The classifier was retrained with a learning rate = 0.01, a number of epochs = 500 , and a batch size = 100. The script split the dataset to use 80 percent of it as a training set, 10 percent of it as a testing set used to test the classifier after each epoch and the last 10 percent as a validation dataset used to test the trained model. The terminal command that was used to run the retrain.py can be seen in \autoref{fig:retrain}.
 
