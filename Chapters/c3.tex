@@ -7,7 +7,7 @@ This chapter provides information about the research methods used in the project
   \item Choose the evaluation method for evaluating the performance of machine learning algorithms
 \end{enumerate}The choices made and the reasoning behind them are going to be explained next.
 
-\section{Choice of a programming language}
+\section{Choice of a Programming Language}
 
  It was chosen to use Python programming language for implementing this project. The language was chosen because it is one of the most popular languages used by machine learning researchers and developers. It is also free and open sourced. Since Python is an interpreted language, code written in Python can be executed on multiple different platforms without having a need to change anything in the code. Thanks to Python's popularity, there are many publicly available and open sourced packages with efficient implementation of machine learning algorithms, that can be downloaded.
 
@@ -25,18 +25,18 @@ The alternative language that was also considered was Matlab. Matlab is a domain
 
 \section{Choice of Machine learning libraries}
 
-\subsection{Why there was a need to use a machine learning library}
+\subsection{Why was a Machine Learning Library Needed}
 
 It is possible to implement machine learning algorithms without using any additional libraries. However, there are many benefits provided by using a  machine learning library. Algorithms provided in machine learning libraries often can be more efficient. It also takes a less time to adapt a provided algorithm for a task than to write a particular algorithm for it. Because of that, it was decided to research what machine learning libraries exist for Python.
 
-\subsection{Library used for machine learning }
+\subsection{Library Used for Machine Learning }
 
 Sckit-learn python package was chosen as a library for working with machine learning models. This package provides state-of-the-art implementations of many well-known machine learning algorithms. It also has an easy-to-use interface tightly integrated with the Python language \citep{pedregosa2011scikit}. Large parts of this module are written in c or C++. Because C and C++ are much faster than Python, it makes algorithms run faster compared to a standard Python implementation. Sckit\-learn machine learning algorithms are high-level API's.  A programmer does not need about how these algorithms are implemented. Nevertheless, algorithms provided in this package are very flexible and can be configured to programmer's needs \citep{buitinck2013api}.
 
 In the case of food image classification, the main advantages that Sckit-learn provided were the fact that it used same data input format for every machine learning algorithm and that parameters of algorithms could be easily configured to make classifiers work on image classification problem.
 
 
-\section{The evaluation method for the classification algorithms tried}
+\section{The Evaluation Method for the Classification Algorithms}
 
 The key indicator of performance in the classification task is a classification accuracy. Accuracy is calculated by dividing the number of correct predictions by the total number of predictions. By calculating and comparing accuracy scores for every machine learning algorithm tried, the best food image classification technique was found.
 
