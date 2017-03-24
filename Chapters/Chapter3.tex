@@ -140,7 +140,7 @@ Firstly, it was chosen to increase the value of C. It was incremented to the val
 
 Finally, the  randomised grid search was used to find the  best set of C and gamma hyperparameters was. C values of  \(10, 100, 1000, 5000, 10000\) and gamma values  of \(0.0001, 0.0005, 0.001, 0.005, 0.01, 0.1\) were tried. Grid search found that C=10 and gamma = 0.0001 were the best set of parameters. It was reasonable that classifier performed better with the lowest value of gamma because images of food vary a lot and because of that a single image should not have too much influence on the separation lines between classes. 
 
-Them  the support vector machine was trained on the whole training dataset with C = 10 and gamma = 0.0001. Despite the fact that the hyperparameters were optimal, the accuracy of the classifier on the training set was only 25 percent. Plotted confusion matrix (\autoref{fig:svm2}) showed that the model still classified all test dataset as a salad class. 
+Them  the support vector machine was trained on the whole training dataset with C = 10 and gamma = 0.0001. Despite the fact that the hyperparameters were optimal, the accuracy of the classifier on the training set was only 25 percent. Plotted confusion matrix (\autoref{fig:svm_10_10}) showed that the model still classified all test dataset as a salad class. 
 
 It was deducted that SVM algorithm was unable to classify the dataset correctly because a number of features considered when dividing the hyperplanes was too high. It was decided to use principal component analysis to reduce the number of features and test if that solves the problem.
 
