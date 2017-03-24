@@ -11,7 +11,7 @@ Deep learning is often regarded as an exciting and new technology. In reality, t
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.5\textwidth]{Figures/relu.jpeg}
-\caption{The ReLU activation function \citep{231nn}}
+\caption{The ReLU Activation Function \citep{231nn}}
 \label{fig:relu}
 \end{figure}
 
@@ -27,7 +27,7 @@ Because of the complexity and a low-level implementation, it was a very challeng
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.5\textwidth]{Figures/4/sess.jpg}
-\caption{Example of a TensorFlow program that computes the result of adding two scalars}
+\caption{TensorFlow Program that Adds two Scalars}
 \label{fig:sess}
 \end{figure}
 
@@ -49,7 +49,7 @@ To one-hot encode, the labels of the dataset were first transformed into numeric
 Vanilla Ice Cream     &  4  &   [1, 0, 0,0]    \\ 
  \hline
 \end{tabular}
-\caption{Applying labels encoding to the dataset}
+\caption{One-Hot Encoding for the Dataset}
 \label{table:oh}
 \end{center}
 \end{table}
@@ -81,12 +81,12 @@ To conclude, despite the fact that a linear classifier is such a simple algorith
 \begin{tabular}{ |c|c|c|c| } 
  \hline
  Learning Rate &   Optimization Function & Batch Size & Classification Accuracy \\   \hline
-0.005    &   Adam Optimizer  &  85  & 51.53\% \\
-0.005    &   Adam Optimizer  &  full dataset  & 26.00\% \\
-0.005    &   Gradient Descent Optimizer  &  85  & 44.44\% \\ 
+0.005    &   Adam   &  85  & 51.53\% \\
+0.005    &   Adam &  full dataset  & 26.00\% \\
+0.005    &   Gradient Descent   &  85  & 44.44\% \\ 
  \hline
 \end{tabular}
-\caption{The influence of optimization function and its hyperparameters to the classification accuracy}
+\caption{The Influence of the Hyperparameters to the Accuracy of the Linear Classifier }
 \label{table:linear}
 \end{center}
 \end{table}
@@ -115,7 +115,7 @@ Finally, it was decided to try to increase the number of layers in this neural n
 0.0001    &   5  &  256, 256, 256, 64, 4 & 58.81\% \\  
  \hline
 \end{tabular}
-\caption{The influence of optimization function and its hyperparameters to the classification accuracy}
+\caption{The Influence of the Hyperparameters to the Accuracy of the Multi-layer Neural Network  }
 \label{table:multi}
 \end{center}
 \end{table}
@@ -138,7 +138,7 @@ Convolutional neural networks work by extracting the features from images automa
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.5\textwidth]{Figures/4/Max_pooling.png}
-\caption{Illustration of the max pooling operation, the function outputs a maximum output in every 2 by 2 square \citep{wiki:Convolutional}}
+\caption{Illustration of the Max Pooling} The function outputs a maximum output in every 2 by 2 square \citep{wiki:Convolutional}
 \label{fig:max}
 \end{figure}
  
@@ -154,7 +154,7 @@ It was chosen to design a convolutional neural network with three convolutional 
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.5\textwidth]{Figures/4/conv.PNG}
-\caption{The convolutional network model in written TensorFlow}
+\caption{The Convolutional Neural Network Model in TensorFlow}
 \label{fig:con_mod}
 \end{figure}
 
@@ -175,7 +175,7 @@ The algorithm was modified to accept RGB images to test whether colour channels 
 28x28x3 & 0.003   &   5  &  3 x conv, fc, o  & 47.50\% \\
  \hline
 \end{tabular}
-\caption{Details about the first two convolutional models tried}
+\caption{The First two Convolutional Models Tried}
 
 \label{table:convi}
 \textit{ conv - convolutional layer, fc - fully connected layer, o - output layer}
@@ -186,7 +186,7 @@ The algorithm was modified to accept RGB images to test whether colour channels 
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.8\textwidth]{Figures/4/conv_diagram.PNG}
-\caption{The  Convolutional neural network model diagram }
+\caption{Layer Diagram  of the  Convolutional Neural Network }
 \label{fig:conv2}
 \end{figure}
 
@@ -217,7 +217,7 @@ Finally, the architecture of dropout layers was modified, to test whether it cou
 0.001    &   20\%   &  Every  & 100  & 69.34\% \\ \hline
 0.002    &   50\%   &  Fully connected& 100  & 51.54\% \\  \hline
 \end{tabular}
-\caption{Different configurations for convolutional neural networks tried with 56x56x3 pictures}
+\caption{Configurations for Convolutional Neural Networks tried with 56x56x3 Pictures}
 \label{table:53x53}
 \end{center}
 \end{table}
@@ -238,7 +238,7 @@ It was chosen to retrain the Google Inception v3 model. A python script for load
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.5\textwidth]{Figures/4/term.PNG}
-\caption{Terminal command used to launch python script that retrains the Inception v3 Model}
+\caption{Command Used to Retrain the Inception v3 Model}
 \label{fig:retrain}
 \end{figure}
 
@@ -256,14 +256,14 @@ To obtain a better understanding how can this classifier perform on the real-wor
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.5\textwidth]{Figures/4/term-train.PNG}
-\caption{Retraining process of the classifier, 96 percent accuracy was reached in just 10 epochs}
+\caption{Retraining  of the Classifier, 96 Percent Accuracy was Reached in  10 Epochs}
 \label{fig:retrain-2}
 \end{figure}
 
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.5\textwidth]{Figures/4/4.jpg}
-\caption{A picture of a deep pan pizza that was missclassified as a fish}
+\caption{Deep Pan Pizza that was Missclassified as a Fish}
 \label{fig:miss}
 \end{figure}
 
