@@ -48,13 +48,21 @@
 \addtocontents{toc}{\vspace{1em}}  % Add a gap in the Contents, for aesthetics
 
 I certify that the material contained in this dissertation is my own work and does not contain unreferenced or unacknowledged material. I also warrant that the above statement applies to the implementation of the project and all associated documentation. Regarding the electronically submitted version of this submitted work, I consent to this being stored electronically and copied for assessment purposes, including the School's use of plagiarism detection systems in order to check the integrity of assessed work.
-I agree to my dissertation being placed in the public domain, with my name explicitly included as the author of the work.
+I agree to my dissertation being placed in the public domain, with my name explicitly included as the author of the work. \\
 
 Date:\\  % This prints a line to write the date
 \rule[1em]{25em}{0.5pt}
 
 Signed:\\
 \rule[1em]{25em}{0.5pt}  % This prints a line for the signature
+\\
+\addtotoc{Working Documents}  % Add the "Abstract" page entry to the Contents
+\work{
+\addtocontents{toc}{\vspace{1em}}  % Add a gap in the Contents, for aesthetics
+
+The working documents of this project are availabe at \url{https://github.com/laur1s/FoodClassifier} and \url{http://www.lancaster.ac.uk/ug/tumosa/}. A food image dataset used is made available at \url{https://lancaster.app.box.com/v/FoodData}.
+The \LaTeX\     source code of this  report is available at \url{https://github.com/laur1s/Dissertation}.
+}
  
  
 }
@@ -81,34 +89,25 @@ Signed:\\
 \abstract{
 \addtocontents{toc}{\vspace{1em}}  % Add a gap in the Contents, for aesthetics
 
-The dissertation focuses on computer vision techniques for classifying food objects from images. The dataset of food images was accumulated. Then, different machine learning algorithms such as k-nearest neighbors classifier, support vector machine, linear classifier, multilayer neural network, convolutional neural network, and transfer learning were explored. The classifiers that use these algorithms were developed. To evaluate the classification performance accuracy score of each classifier was calculated. The method that worked best, transfer learning, achieved 98.20 percent accuracy on the test dataset. It was concluded that food classification from images with reasonable accuracy was possible and deep learning models work much better for this task, compared to the other machine learning techniques.
+The dissertation focuses on computer vision techniques for classifying food objects from images. Food classification is an important task, that could be use for automatic dietary assessment.To accomplish this task, the dataset of food images was firstly obtained. Then, different machine learning algorithms such as the  k-nearest neighbors classifier, support vector machine, linear classifier, multilayer neural network, convolutional neural network, and transfer learning were explored. The classifiers that use these algorithms were developed. To evaluate the classification performance, accuracy score of each classifier was calculated. The method that worked best, transfer learning, achieved 98.20 percent accuracy on the test dataset. It was concluded that food classification from images with reasonable accuracy was possible and deep learning models work much better for this task, compared to the other machine learning techniques.
 
 }
 
 \clearpage  % Abstract ended, start a new page
+     
 
-% The Abstract Page
-\addtotoc{Working Documents}  % Add the "Abstract" page entry to the Contents
-\work{
-\addtocontents{toc}{\vspace{1em}}  % Add a gap in the Contents, for aesthetics
-
-The working documents of this project are availabe on \url{https://github.com/laur1s/Dissertation} and \url{http://www.lancaster.ac.uk/ug/tumosa/}.
-}
-
-\clearpage  % Abstract ended, start a new page
 %% ----------------------------------------------------------------
 
 \setstretch{1.3}  % Reset the line-spacing to 1.3 for body text (if it has changed)
-\iffalse
 % The Acknowledgements page, for thanking everyone
 \acknowledgements{
 \addtocontents{toc}{\vspace{1em}}  % Add a gap in the Contents, for aesthetics
 
-I would like to thank my project supervisor, Adrian Friday for guidance and valuable feedback provided for the project and the final report.
+I would like to thank to my project supervisor, Adrian Friday for guidance and valuable feedback provided for implementing  the project and writing the report.
 
-I would like to thank Christian Bizer who taught a data mining course at the University of Mannheim when I studied there. This course introduced me to data mining and machine learning algorithms and aroused my interest in the subject.
+I would like to thank Christian Bizer who taught a data mining course at the University of Mannheim when I studied there. This course introduced me to data mining and machine learning  and aroused my interest in this field of computer science.
 
-I would like to thank Andrej Karpathy who was a lecturer at Stanford's CS231n: Convolutional Neural Networks for Visual Recognition course. He made all the lecture recordings and the course material publicly available which were a great learning resource. I believe that public availability is a huge step in democratizing education and in some sense AI.
+I would like to thank Andrej Karpathy who was a lecturer at Stanford's CS231n: Convolutional Neural Networks for Visual Recognition course. He made all  lecture recordings and the course material publicly available. These lectures were a great learning material and contrbuted greatly to the success of the project.
 
 I would like to thank my family for believing that I could study computer science at university and for supporting and encouraging me.
 
@@ -116,7 +115,7 @@ Finally, I would like to dedicate this dissertation to my sister, Aiste.
 
 }
 \clearpage  % End of the Acknowledgements
-\fi
+
 \pagestyle{empty}  % Page style needs to be empty for this page
 %\addtotoc{Dedication}
 %\addtocontents{toc}{\vspace{1em}} 
